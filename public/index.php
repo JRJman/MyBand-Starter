@@ -27,5 +27,15 @@
  *  F. De complete view (met data) wordt door de controller teruggestuurd naar de gebruiker (dit is de Response)
  *
  */
+?>
 
-
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p>hallo</p>
+  </body>
+</html>

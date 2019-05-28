@@ -11,7 +11,10 @@
 class HomeController {
 
 	function homePage(){
+		$page = "Home";
+		require '../private/includes/functions.php';
 		require '../private/views/header.php';
+		require '../private/views/home_page.php';
 		require '../private/views/footer.php';
 	}
 

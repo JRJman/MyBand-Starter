@@ -2,11 +2,6 @@ body{
   margin: 0;
 }
 
-@keyframes navigatie {
-  from {top: -33%;}
-  to {top: 10%;}
-}
-
 #header {
   background-color: red;
   display: grid;
@@ -15,19 +10,27 @@ body{
 
 nav {
   background-color: black;
-  width: 240px;
+  width: 15%;
   position: absolute;
   right: 0%;
-  top: 10%;
-  z-index: -1;
+  top: -55%;
+  transition: top 0.5s;
+  z-index: 1;
+}
+
+nav ul {
   text-align: center;
-  display: none;
 }
 
 nav li{
-  padding: 5px;
-  margin: 10px;
-  background-color: green
+  padding: 3px;
+  margin: 8px;
+  border-radius: 15px;
+  background-color: green;
+}
+
+nav li:hover{
+  background-color: #00ffff;
 }
 
 nav a {
@@ -44,18 +47,29 @@ nav a {
   cursor: pointer;
 }
 
+#labelMenuButton2::before{
+  content: "\2716";
+  cursor: pointer;
+}
+
 #menuButton{
   display: none;
 }
 
 #menuButton:checked ~ #labelMenuButton::before {
-  content: "\2716";
+  visibility: hidden;
 }
 
 #menuButton:checked ~ nav {
-  display: block;
-  animation-name: navigatie;
-  animation-duration: 1s;
+  top: -2.5%;
+}
+
+#labelMenuButton2{
+  position: relative;
+  left: 57px;
+  color: red;
+  font-size: 3.5em;
+  font-weight: 900;
 }
 
 #labelMenuButton{

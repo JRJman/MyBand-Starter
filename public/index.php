@@ -74,7 +74,6 @@ $router->map( 'GET', '/admin', 'AdminController#adminPage', 'admin' );
 
 // Daarna vragen we $router of de huidige URL getmatcht kan worden.
 $match = $router->match();
-
 /**
  * Als er een "match" is dan roepen we de controller en de juiste method aan die we zelf hebben ingesteld
  * Je krijgt namelijk alle info terug in de $match variabele die je nodig hebt om de juiste code aan te roepen

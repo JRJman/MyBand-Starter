@@ -11,6 +11,7 @@
 class ResultatenController {
 
 	function resultatenPage(){
+		$page = "Resultaten";
 		require '../private/views/header.php';
 		require '../private/views/footer.php';
 	}

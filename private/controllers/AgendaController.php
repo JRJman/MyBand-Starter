@@ -11,6 +11,7 @@
 class AgendaController {
 
 	function agendaPage(){
+		$page = "Agenda";
 		require '../private/views/header.php';
 		require '../private/views/footer.php';
 	}

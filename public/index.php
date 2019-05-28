@@ -56,9 +56,9 @@ $router->setBasePath('/test/public');
 
 $router->map( 'GET', '/', 'HomeController#homePage', 'home' );
 
-$router->map( 'GET', '/informatie1', 'Informatie1Controller#informatie1Page', 'informatie1' );
+$router->map( 'GET', '/geschiedenis', 'GeschiedenisController#geschiedenisPage', 'informatie1' );
 
-$router->map( 'GET', '/informatie2', 'Informatie2Controller#informatie2Page', 'informatie2' );
+$router->map( 'GET', '/spelregels', 'SpelregelsController#SpelregelsPage', 'informatie2' );
 
 $router->map( 'GET', '/agenda', 'AgendaController#agendaPage', 'agenda' );
 

@@ -8,10 +8,12 @@
  * Geeft de gegevens aan de "view" laag (HTML template) om weer te geven
  *
  */
-class Informatie1Controller {
+class GeschiedenisController {
 
-	function informatie1Page(){
+	function geschiedenisPage(){
+		$page = "Geschiedenis";
 		require '../private/views/header.php';
+		require '../private/views/geschiedenis_page.php';
 		require '../private/views/footer.php';
 	}
 

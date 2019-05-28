@@ -8,10 +8,12 @@
  * Geeft de gegevens aan de "view" laag (HTML template) om weer te geven
  *
  */
-class Informatie2Controller {
+class SpelregelsController {
 
-	function informatie2Page(){
+	function SpelregelsPage(){
+		$page = "Spelregels";
 		require '../private/views/header.php';
+		require '../private/views/spelregels_page.php';
 		require '../private/views/footer.php';
 	}
 

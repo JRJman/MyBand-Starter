@@ -11,6 +11,7 @@
 class ProfielController {
 
 	function profielPage(){
+		$page = "Profiel";
 		require '../private/views/header.php';
 		require '../private/views/footer.php';
 	}

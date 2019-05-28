@@ -11,6 +11,7 @@
 class Log_inController {
 
 	function Log_inPage(){
+		$page = "Log in/Registeren";
 		require '../private/views/header.php';
 		require '../private/views/footer.php';
 	}

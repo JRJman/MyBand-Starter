@@ -42,6 +42,10 @@ nav a {
   text-align: center;
 }
 
+#header img{
+  text-align: left;
+}
+
 #labelMenuButton::before{
   content: "\2630";
   cursor: pointer;

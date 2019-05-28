@@ -16,14 +16,14 @@
       <nav>
         <ul>
           <label for="menuButton" id="labelMenuButton2"></label>
-          <li><a href="">Home</a></li>
-          <li><a href="informatie1">Informatie 1</a></li>
-          <li><a href="informatie2">Informatie 2</a></li>
-          <li><a href="agenda">Agenda</a></li>
-          <li><a href="zoeken">Zoeken</a></li>
-          <li><a href="profiel">Profiel</a></li>
-          <li><a href="log_in-registeren">Log in/Registeren</a></li>
-          <li><a href="admin">admin</a></li>
+          <li><a href="http://localhost/test/public/">Home</a></li>
+          <li><a href="http://localhost/test/public/geschiedenis">Geschiedenis</a></li>
+          <li><a href="http://localhost/test/public/spelregels">Spelregels</a></li>
+          <li><a href="http://localhost/test/public/agenda">Agenda</a></li>
+          <li><a href="http://localhost/test/public/zoeken">Zoeken</a></li>
+          <li><a href="http://localhost/test/public/profiel">Profiel</a></li>
+          <li><a href="http://localhost/test/public/log_in-registeren">Log in/Registeren</a></li>
+          <li><a href="http://localhost/test/public/admin">Admin</a></li>
         </ul>
       </nav>
     </div>

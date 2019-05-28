@@ -11,6 +11,7 @@
 class AdminController {
 
 	function adminPage(){
+		$page = "Admin";
 		require '../private/views/header.php';
 		require '../private/views/footer.php';
 	}

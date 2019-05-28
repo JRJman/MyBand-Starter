@@ -8,12 +8,11 @@
  * Geeft de gegevens aan de "view" laag (HTML template) om weer te geven
  *
  */
-class EventsController {
+class Informatie1Controller {
 
-	function overview(){
-
-		echo 'Agenda overzichts pagina';
-
+	function informatie1Page(){
+		require '../private/views/header.php';
+		require '../private/views/footer.php';
 	}
 
 }

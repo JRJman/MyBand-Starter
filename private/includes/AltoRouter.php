@@ -52,7 +52,7 @@ class AltoRouter {
 		$this->setBasePath($basePath);
 		$this->addMatchTypes($matchTypes);
 	}
-	
+
 	/**
 	 * Retrieves all routes.
 	 * Useful if you want to process or display routes.
@@ -144,7 +144,7 @@ class AltoRouter {
 
 		// Replace named parameters
 		$route = $this->namedRoutes[$routeName];
-		
+
 		// prepend base path to route url again
 		$url = $this->basePath . $route;
 
@@ -170,7 +170,6 @@ class AltoRouter {
 			}
 
 		}
-
 		return $url;
 	}
 
@@ -266,7 +265,7 @@ class AltoRouter {
 				}
 
 				$optional = $optional !== '' ? '?' : null;
-				
+
 				//Older versions of PCRE require the 'P' in (?P<named>)
 				$pattern = '(?:'
 						. ($pre !== '' ? $pre : null)

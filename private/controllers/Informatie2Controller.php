@@ -8,12 +8,11 @@
  * Geeft de gegevens aan de "view" laag (HTML template) om weer te geven
  *
  */
-class PageController {
+class Informatie2Controller {
 
-	function aboutUs(){
-
-		echo 'Pagina met informatie over de mensen van Camping Duinzicht.';
-
+	function informatie2Page(){
+		require '../private/views/header.php';
+		require '../private/views/footer.php';
 	}
 
 }

@@ -8,12 +8,11 @@
  * Geeft de gegevens aan de "view" laag (HTML template) om weer te geven
  *
  */
-class FacilitiesController {
+class AgendaController {
 
-	function housesOverview(){
-
-		echo 'Overzicht van alle huisjes op Camping Duinzicht';
-
+	function agendaPage(){
+		require '../private/views/header.php';
+		require '../private/views/footer.php';
 	}
 
 }

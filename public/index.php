@@ -47,24 +47,30 @@ require '../private/includes/init.php';
 $router = new AltoRouter();
 
 //Als jouw public folder niet te zien is als je naar http://localhoist gaat stel dan het juiste basePath in (pas dit pad aan naar jouw situatie)
-// $router->setBasePath('/bewijzenmap/periode1.4/bap/MyBandStarter/public');
+$router->setBasePath('/test/public');
 
 /**
  * Hier stellen we de juiste "routes" in voor onze website
  * We vertellen de router welke url naar welk stukje code (de controller) moet worden doorgestuuurd.
  */
 
-$router->map( 'GET', '/', 'HomeController#homepage', 'home' );
+$router->map( 'GET', '/', 'HomeController#homePage', 'home' );
 
-$router->map( 'GET', '/evenementen', 'EventsController#overview', 'agenda-overzicht' );
+$router->map( 'GET', '/informatie1', 'Informatie1Controller#informatie1Page', 'informatie1' );
 
-$router->map( 'GET', '/onze-huisjes', 'FacilitiesController#housesOverview', 'huisjes' );
+$router->map( 'GET', '/informatie2', 'Informatie2Controller#informatie2Page', 'informatie2' );
 
-$router->map( 'GET', '/over-ons', 'PageController#aboutUs', 'over-ons' );
+$router->map( 'GET', '/agenda', 'AgendaController#agendaPage', 'agenda' );
 
-$router->map( 'GET', '/voorbeeld', function () {
-	echo 'Zo kun je ook een route afhandelen door een inline functie te gebruiken, maar dat wordt al snel rommelig (deze mag je dus weer weghalen of laten staan als voorbeeld';
-} );
+$router->map( 'GET', '/log_in-registeren', 'Log_inController#Log_inPage', 'log_in/registeren' );
+
+$router->map( 'GET', '/zoeken', 'ZoekenController#zoekenPage', 'zoeken' );
+
+$router->map( 'GET', '/resultaten', 'ResultatenController#resultatenPage', 'resultaten' );
+
+$router->map( 'GET', '/profiel', 'ProfielController#profielPage', 'profiel' );
+
+$router->map( 'GET', '/admin', 'AdminController#adminPage', 'admin' );
 
 // Daarna vragen we $router of de huidige URL getmatcht kan worden.
 $match = $router->match();

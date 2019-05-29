@@ -13,7 +13,7 @@ nav {
   width: 15%;
   position: absolute;
   right: 0%;
-  top: -55%;
+  top: -70%;
   transition: top 0.5s;
   z-index: 1;
 }
@@ -70,7 +70,7 @@ nav a {
 
 #labelMenuButton2{
   position: relative;
-  left: 57px;
+  left: 30%;
   color: red;
   font-size: 3.5em;
   font-weight: 900;

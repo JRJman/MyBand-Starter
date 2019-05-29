@@ -68,6 +68,8 @@ $router->map( 'GET', '/zoeken', 'ZoekenController#zoekenPage', 'zoeken' );
 
 $router->map( 'GET', '/resultaten', 'ResultatenController#resultatenPage', 'resultaten' );
 
+$router->map( 'GET', '/contactformulier', 'ContactformulierController#contactformulierPage', 'contactformulier' );
+
 $router->map( 'GET', '/profiel', 'ProfielController#profielPage', 'profiel' );
 
 $router->map( 'GET', '/admin', 'AdminController#adminPage', 'admin' );

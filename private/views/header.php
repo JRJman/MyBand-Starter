@@ -22,6 +22,7 @@
           <li><a href="http://localhost/test/public/agenda">Agenda</a></li>
           <li><a href="http://localhost/test/public/zoeken">Zoeken</a></li>
           <li><a href="http://localhost/test/public/profiel">Profiel</a></li>
+          <li><a href="http://localhost/test/public/contactformulier">Contactformulier</a></li>
           <li><a href="http://localhost/test/public/log_in-registeren">Log in/Registeren</a></li>
           <li><a href="http://localhost/test/public/admin">Admin</a></li>
         </ul>

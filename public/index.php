@@ -61,6 +61,7 @@ $router->map( 'GET', '/geschiedenis', 'GeschiedenisController#geschiedenisPage',
 $router->map( 'GET', '/spelregels', 'SpelregelsController#SpelregelsPage', 'informatie2' );
 
 $router->map( 'GET', '/agenda', 'AgendaController#agendaPage', 'agenda' );
+$router->map( 'GET', '/agenda/bericht/[i:id]', 'AgendaController#showBericht', 'agendaBerichten' );
 
 $router->map( 'GET', '/log_in-registeren', 'Log_inController#Log_inPage', 'log_in/registeren' );
 

@@ -64,16 +64,21 @@ $router->map( 'GET', '/agenda', 'AgendaController#agendaPage', 'agenda' );
 $router->map( 'GET', '/agenda/bericht/[i:id]', 'AgendaController#showBericht', 'agendaBerichten' );
 
 $router->map( 'GET', '/log_in-registeren', 'Log_inController#Log_inPage', 'log_in/registeren' );
+$router->map( 'GET', '/log_in-registeren/fout/[a:boolean]', 'Log_inController#Log_inPageWrong1', 'log_in/registeren_fout' );
 
 $router->map( 'GET', '/zoeken', 'ZoekenController#zoekenPage', 'zoeken' );
 
 $router->map( 'POST', '/resultaten', 'ResultatenController#resultatenPage', 'resultaten' );
+
+$router->map( 'GET', '/mail/[a:tekst]/[a:gebruikersnaam]', 'MailController#mailPage', 'mails' );
 
 $router->map( 'GET', '/contactformulier', 'ContactformulierController#contactformulierPage', 'contactformulier' );
 
 $router->map( 'GET', '/profiel', 'ProfielController#profielPage', 'profiel' );
 
 $router->map( 'GET', '/admin', 'AdminController#adminPage', 'admin' );
+
+$router->map( 'GET', '/uitloggen', 'UitloggenController#UitloggenPage', 'uitloggen' );
 
 // Daarna vragen we $router of de huidige URL getmatcht kan worden.
 $match = $router->match();

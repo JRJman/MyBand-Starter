@@ -1,5 +1,23 @@
-<?php require '../private/includes/functions.php'; ?>
-<?php require '../private/models/model.php'; ?>
+<?php
+  require '../private/includes/functions.php';
+  require '../private/models/model.php';
+  session_start();
+  $header = false;
+  if(!empty($_SESSION['id'])){
+    if(!empty($_SESSION['ver'])){
+      $con = dbConnect();
+      $sql = "SELECT * FROM account";
+      $statement = $con->query($sql);
+      foreach ($statement as $rij) {
+        if($_SESSION['id'] === $rij['id']){
+          if($_SESSION['ver'] === $rij['vertificatie']){
+            $header = true;
+          }
+        }
+      }
+    }
+  }
+?>
 <!DOCTYPE html>
 <html lang="nl">
   <head>
@@ -24,8 +42,14 @@
           <li id="contactformulier"><a href="http://localhost/test/public/contactformulier">Contactformulier</a></li>
           <li id="agenda"><a href="http://localhost/test/public/agenda">Agenda</a></li>
           <li id="zoeken"><a href="http://localhost/test/public/zoeken">Zoeken</a></li>
-          <li id="profiel"><a href="http://localhost/test/public/profiel">Profiel</a></li>
-          <li id="log_in"><a href="http://localhost/test/public/log_in-registeren">Log in/Registeren</a></li>
+          <?php
+            if($header == true){
+              echo "<li id='log_out'><a href='http://localhost/test/public/uitloggen'>Uitloggen</a></li>";
+              echo "<li id='profiel'><a href='http://localhost/test/public/profiel'>Profiel</a></li>";
+            } else {
+              echo "<li id='log_in'><a href='http://localhost/test/public/log_in-registeren'>Log in/Registeren</a></li>";
+            }
+          ?>
           <li id="admin"><a href="http://localhost/test/public/admin">Admin</a></li>
         </ul>
       </nav>

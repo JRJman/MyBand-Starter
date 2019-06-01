@@ -11,8 +11,18 @@
 class Log_inController {
 
 	function Log_inPage(){
-		$page = "Log in/Registeren";
+		$page = "Log_in_Registeren";
+		$log_in = "";
 		require '../private/views/header.php';
+		require '../private/views/log_in_registeren.php';
+		require '../private/views/footer.php';
+	}
+
+	function Log_inPageWrong1($boolean){
+		$page = "Log_in_Registeren";
+		$log_in = $boolean;
+		require '../private/views/header.php';
+		require '../private/views/log_in_registeren.php';
 		require '../private/views/footer.php';
 	}
 

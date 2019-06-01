@@ -13,6 +13,7 @@ class ZoekenController {
 	function zoekenPage(){
 		$page = "Zoeken";
 		require '../private/views/header.php';
+		require '../private/views/search_page.php';
 		require '../private/views/footer.php';
 	}
 

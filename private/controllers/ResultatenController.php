@@ -13,6 +13,7 @@ class ResultatenController {
 	function resultatenPage(){
 		$page = "Resultaten";
 		require '../private/views/header.php';
+		require '../private/views/resultaten_page.php';
 		require '../private/views/footer.php';
 	}
 

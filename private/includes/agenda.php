@@ -23,8 +23,8 @@
     $monthDown = $month - 1;
     $wordMonth = date('F', mktime($hour,$minute,$second,$month,$day,$year));
     echo "<p class='date'>" . $year . " " . $wordMonth . "</p>";
-    echo "<input type=button value=up id=up class='button' onclick=ajaxAgenda(" . $monthUp ."," . $year . ")><br>";
-    echo "<input type=button value=down id=down class='button' onclick=ajaxAgenda(" . $monthDown ."," . $year . ")>";
+    echo "<input type=button value='volgende maand' id=up class='button' onclick=ajaxAgenda(" . $monthUp ."," . $year . ")>";
+    echo "<input type=button value='vorige maand' id=down class='button' onclick=ajaxAgenda(" . $monthDown ."," . $year . ")>";
     echo "<table><tr><th>week</th><th>ma</th><th>di</th><th>wo</th><th>do</th><th>vr</th><th>za</th><th>zo</th></tr>";
     while($boolean == false){
       $checker = date('l', mktime($hour,$minute,$second,$month,$day,$year));

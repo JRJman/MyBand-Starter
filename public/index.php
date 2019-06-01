@@ -67,7 +67,7 @@ $router->map( 'GET', '/log_in-registeren', 'Log_inController#Log_inPage', 'log_i
 
 $router->map( 'GET', '/zoeken', 'ZoekenController#zoekenPage', 'zoeken' );
 
-$router->map( 'GET', '/resultaten', 'ResultatenController#resultatenPage', 'resultaten' );
+$router->map( 'POST', '/resultaten', 'ResultatenController#resultatenPage', 'resultaten' );
 
 $router->map( 'GET', '/contactformulier', 'ContactformulierController#contactformulierPage', 'contactformulier' );
 

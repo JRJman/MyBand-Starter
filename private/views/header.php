@@ -1,4 +1,5 @@
 <?php require '../private/includes/functions.php'; ?>
+<?php require '../private/models/model.php'; ?>
 <!DOCTYPE html>
 <html lang="nl">
   <head>

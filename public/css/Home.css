@@ -24,8 +24,8 @@ h2 {
 }
 
 .bericht img{
-  width: auto;
-  height: 300px;
+  width: 400px;
+  height: auto;
   float: left;
   padding: 15px;
 }
@@ -41,4 +41,12 @@ h2 {
   margin: 0;
   bottom: 10px;
   left: 10px;
+}
+
+form {
+  text-align: center;
+}
+
+#pages {
+  text-align: center;
 }

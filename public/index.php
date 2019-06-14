@@ -44,6 +44,9 @@ require '../private/includes/AltoRouter.php';
 $CONFIG = require '../private/includes/config.php';
 require '../private/includes/init.php';
 
+require '../private/includes/functions.php';
+require '../private/models/model.php';
+
 $router = new AltoRouter();
 
 //Als jouw public folder niet te zien is als je naar http://localhoist gaat stel dan het juiste basePath in (pas dit pad aan naar jouw situatie)
@@ -56,9 +59,9 @@ $router->setBasePath('/test/public');
 
 $router->map( 'GET', '/', 'HomeController#homePage', 'home' );
 
-$router->map( 'GET', '/geschiedenis', 'GeschiedenisController#geschiedenisPage', 'informatie1' );
+$router->map( 'GET', '/geschiedenis', 'GeschiedenisController#geschiedenisPage', 'geschiedenis' );
 
-$router->map( 'GET', '/spelregels', 'SpelregelsController#SpelregelsPage', 'informatie2' );
+$router->map( 'GET', '/spelregels', 'SpelregelsController#SpelregelsPage', 'spelregels' );
 
 $router->map( 'GET', '/agenda', 'AgendaController#agendaPage', 'agenda' );
 $router->map( 'GET', '/agenda/bericht/[i:id]', 'AgendaController#showBericht', 'agendaBerichten' );
@@ -66,19 +69,21 @@ $router->map( 'GET', '/agenda/bericht/[i:id]', 'AgendaController#showBericht', '
 $router->map( 'GET', '/log_in-registeren', 'Log_inController#Log_inPage', 'log_in/registeren' );
 $router->map( 'GET', '/log_in-registeren/fout/[a:boolean]', 'Log_inController#Log_inPageWrong1', 'log_in/registeren_fout' );
 
-$router->map( 'GET', '/zoeken', 'ZoekenController#zoekenPage', 'zoeken' );
-
-$router->map( 'POST', '/resultaten', 'ResultatenController#resultatenPage', 'resultaten' );
-
 $router->map( 'GET', '/mail/[a:tekst]/[a:gebruikersnaam]', 'MailController#mailPage', 'mails' );
 
+$router->map( 'GET', '/aanpassen/[a:tekst]', 'AanpassenController#AanpassenPage', 'aanpassen' );
+$router->map( 'GET', '/aanpassen/email/[a:tekst]', 'AanpassenEmailController#AanpassenEmailPage', 'aanpassen_email' );
+$router->map( 'GET', '/aanpassen/wachtwoord/[a:tekst]', 'AanpassenWachtwoordController#AanpassenWachtwoordPage', 'aanpassen_wachtwoord' );
+
+$router->map( 'POST', '/php/[a:tekst]', 'phpController#phpPage', 'extra_php' );
+
 $router->map( 'GET', '/contactformulier', 'ContactformulierController#contactformulierPage', 'contactformulier' );
+
+$router->map( 'GET', '/uitloggen', 'UitloggenController#UitloggenPage', 'uitloggen' );
 
 $router->map( 'GET', '/profiel', 'ProfielController#profielPage', 'profiel' );
 
 $router->map( 'GET', '/admin', 'AdminController#adminPage', 'admin' );
-
-$router->map( 'GET', '/uitloggen', 'UitloggenController#UitloggenPage', 'uitloggen' );
 
 // Daarna vragen we $router of de huidige URL getmatcht kan worden.
 $match = $router->match();
@@ -108,6 +113,8 @@ if ( is_array( $match ) && is_callable( $match['target'] ) ) {
 	}
 } else {
 	// Er is geen match dus een 404 pagina
-	header( $_SERVER["SERVER_PROTOCOL"] . ' 404 Not Found' );
-	echo '404: Onbekende pagina';
+	$page = "404";
+	require '../private/views/header.php';
+	require '../private/views/404.php';
+	require '../private/views/footer.php';
 }

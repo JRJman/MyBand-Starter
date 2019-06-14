@@ -8,13 +8,12 @@
  * Geeft de gegevens aan de "view" laag (HTML template) om weer te geven
  *
  */
-class ResultatenController {
+class AanpassenEmailController {
 
-	function resultatenPage(){
-		$page = "Resultaten";
+	function AanpassenEmailPage($tekst){
+		$page = "email_veranderen";
 		require '../private/views/header.php';
-		require '../private/views/resultaten_page.php';
+		require '../private/views/aanpassen_email_2_page.php';
 		require '../private/views/footer.php';
 	}
-
 }

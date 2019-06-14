@@ -8,13 +8,12 @@
  * Geeft de gegevens aan de "view" laag (HTML template) om weer te geven
  *
  */
-class ZoekenController {
+class AanpassenWachtwoordController {
 
-	function zoekenPage(){
-		$page = "Zoeken";
+	function AanpassenWachtwoordPage($tekst){
+		$page = "wachtwoord_veranderen";
 		require '../private/views/header.php';
-		require '../private/views/search_page.php';
+		require '../private/views/aanpassen_wachtwoord_2_page.php';
 		require '../private/views/footer.php';
 	}
-
 }

@@ -12,8 +12,8 @@
 
   if(!$result){
        echo 'Er ging iets fout bij het versturen van de verificatie e-mail';
-       header("Location: http://localhost/test/public/contactformulier");
+       header("Location: http://localhost:8080/test/public/contactformulier");
     }else{
-      header("Location: http://localhost/test/public/contactformulier");
+      header("Location: http://localhost:8080/test/public/contactformulier");
     }
 ?>

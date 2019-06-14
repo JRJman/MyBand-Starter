@@ -1,7 +1,6 @@
 <?php
 
-function dbConnect()
-{
+function dbConnect(){
 
     $config = require __DIR__ . '/config.php';
 
@@ -22,19 +21,19 @@ function dbConnect()
 }
 
 function maakAccount($gebruikersnaam, $wachtwoord, $email){
-  $hash = password_hash($wachtwoord, PASSWORD_DEFAULT);
+  $hash = password_hash($wachtwoord, PASSWORD_BCRYPT);
   $ver = code();
   $con = dbConnect();
   $sql = "INSERT INTO account (id,gebruikersnaam,wachtwoord,email,active,vertificatie) VALUES ('','$gebruikersnaam','$hash','$email','false','$ver')";
   $con->query($sql);
-  $link = "http://localhost/test/public/mail/activatie/'$gebruikersnaam'";
+  $link = "http://localhost:8080/test/public/mail/activatie/'$gebruikersnaam'";
   $msg = "click op deze link om u account te activeren\n" . $link;
   $result = mail($email, 'Activatie Account', $msg);
 }
 
 function code(){
     $code = "";
-    for ($i = 0; $i < 6; $i++) {
+    for ($i = 0; $i < 10; $i++) {
       $number = mt_rand(1, 36);
 
       switch ($number) {

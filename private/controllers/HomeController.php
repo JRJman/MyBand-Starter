@@ -12,9 +12,9 @@ class HomeController {
 
 	function homePage(){
 		$page = "Home";
-		require '../private/views/header.php';
-		require '../private/views/home_page.php';
-		require '../private/views/footer.php';
+		include '../private/views/header.php';
+		include '../private/views/home_page.php';
+		include '../private/views/footer.php';
 	}
 
 }

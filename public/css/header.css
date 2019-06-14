@@ -40,10 +40,12 @@ nav a {
 
 #header h1{
   text-align: center;
+  cursor: pointer;
 }
 
 #header img{
   text-align: left;
+  cursor: pointer;
 }
 
 #labelMenuButton::before{

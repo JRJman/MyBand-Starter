@@ -22,7 +22,7 @@
   }
 
   if($checker == false){
-    header("Location: http://localhost:8080/test/public/");
+    header("Location: http://localhost/test/public/");
   }
 ?>
 

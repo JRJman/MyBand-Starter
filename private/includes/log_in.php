@@ -1,16 +1,18 @@
 <?php
+  $gebruikersnaam = $_GET['gebruikersnaamL'];
+  $wachtwoord = $_GET['wachtwoordL'];
+
   $con = dbConnect();
-  $sql = "SELECT * FROM account";
+  $sql = "SELECT * FROM account WHERE gebruikersnaam='$gebruikersnaam'";
   $statement = $con->query($sql);
+
   $id = 0;
+  $admin = "";
   $ver = "";
   $b1 = false;
   $b2 = false;
   $bL1 = false;
   $bL2 = false;
-
-  $gebruikersnaam = $_GET['gebruikersnaamL'];
-  $wachtwoord = $_GET['wachtwoordL'];
 
   foreach ($statement as $rij) {
     if($gebruikersnaam === $rij['gebruikersnaam']){
@@ -25,6 +27,7 @@
         $bL2 = true;
         $id = $rij['id'];
         $ver = $rij['vertificatie'];
+        $admin = $rij['admin'];
       } else {
         $bL2 = false;
       }
@@ -35,7 +38,8 @@
     session_start();
     $_SESSION['id'] = $id;
     $_SESSION['ver'] = $ver;
-    header("Location: http://localhost:8080/test/public/");
+    $_SESSION['a'] = $admin;
+    header("Location: http://localhost/test/public/");
   } else{
     if($b1 && $b2) {
       $bL2 = false;
@@ -45,11 +49,11 @@
     }
 
     if($bL1 == false && $bL2 == false){
-      header("Location: http://localhost:8080/test/public/log_in-registeren/fout/l3");
+      header("Location: http://localhost/test/public/log_in-registeren/fout/l3");
     } else if($bL2 == false){
-      header("Location: http://localhost:8080/test/public/log_in-registeren/fout/l2");
+      header("Location: http://localhost/test/public/log_in-registeren/fout/l2");
     } else if($bL1 == false){
-      header("Location: http://localhost:8080/test/public/log_in-registeren/fout/l1");
+      header("Location: http://localhost/test/public/log_in-registeren/fout/l1");
     }
   }
 ?>

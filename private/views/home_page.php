@@ -9,4 +9,4 @@
 
 </div>
 
-<script src="http://localhost:8080/test/public/js/home.js"></script>
+<script src="http://localhost/test/public/js/home.js"></script>

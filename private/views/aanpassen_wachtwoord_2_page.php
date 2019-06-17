@@ -9,10 +9,10 @@
     }
   }
   if($boolean == false){
-    header("Location: http://localhost:8080/test/public/verboden_voor_jouw");
+    header("Location: http://localhost/test/public/verboden_voor_jouw");
   }
 ?>
-<form action="http://localhost:8080/test/public/php/wachtwoordU" method="post">
+<form action="http://localhost/test/public/php/wachtwoordU" method="post">
   <p>Typ je nieuwe wachtwoord in</p>
   <input type="password" name="wachtwoord1" required>
   <p>Herhaal je wachtwoord</p>

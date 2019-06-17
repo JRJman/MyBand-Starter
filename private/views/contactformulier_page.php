@@ -1,7 +1,7 @@
 <div id="grid">
   <div id="formulier">
     <h2>Contact Formulier</h2>
-    <form action="http://localhost:8080/test/private/includes/contactfomrmulier.php" method="post" id="form">
+    <form action="http://localhost/test/private/includes/contactfomrmulier.php" method="post" id="form">
       <label for="naam">Naam</label><br>
       <input type="text" class="input" id="naam" name="naam" required><br>
       <label for="e-mail">E-Mail</label><br>

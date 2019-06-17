@@ -24,9 +24,9 @@ function maakAccount($gebruikersnaam, $wachtwoord, $email){
   $hash = password_hash($wachtwoord, PASSWORD_BCRYPT);
   $ver = code();
   $con = dbConnect();
-  $sql = "INSERT INTO account (id,gebruikersnaam,wachtwoord,email,active,vertificatie) VALUES ('','$gebruikersnaam','$hash','$email','false','$ver')";
+  $sql = "INSERT INTO account (id,gebruikersnaam,wachtwoord,email,active,vertificatie,admin) VALUES ('','$gebruikersnaam','$hash','$email','false','$ver','false')";
   $con->query($sql);
-  $link = "http://localhost:8080/test/public/mail/activatie/'$gebruikersnaam'";
+  $link = "http://localhost/test/public/mail/activatie/'$gebruikersnaam'";
   $msg = "click op deze link om u account te activeren\n" . $link;
   $result = mail($email, 'Activatie Account', $msg);
 }

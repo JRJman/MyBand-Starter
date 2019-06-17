@@ -26,7 +26,7 @@
     $nummer3++;
   }
   echo "</div>";
-  if($nummer3 > 2){
+  if($nummer3 > 3){
     $sql = "SELECT * FROM nieuwsbericht WHERE tekst LIKE '%$search%' ORDER BY datum DESC";
     $statement = $con->query($sql);
 

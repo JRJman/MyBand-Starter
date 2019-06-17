@@ -21,8 +21,8 @@
   }
 
   if($boolean){
-    header("Location: http://localhost:8080/test/public/");
+    header("Location: http://localhost/test/public/");
   } else {
-    header("Location: http://localhost:8080/test/public/aanpassen/email/" . $ver);
+    header("Location: http://localhost/test/public/aanpassen/email/" . $ver);
   }
 ?>

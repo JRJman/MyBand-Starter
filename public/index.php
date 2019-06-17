@@ -76,6 +76,7 @@ $router->map( 'GET', '/aanpassen/email/[a:tekst]', 'AanpassenEmailController#Aan
 $router->map( 'GET', '/aanpassen/wachtwoord/[a:tekst]', 'AanpassenWachtwoordController#AanpassenWachtwoordPage', 'aanpassen_wachtwoord' );
 
 $router->map( 'POST', '/php/[a:tekst]', 'phpController#phpPage', 'extra_php' );
+$router->map( 'GET', '/php/[a:tekst]/[a:variable]', 'phpController#phpPageWithVariable', 'extra_php_with_variable)' );
 
 $router->map( 'GET', '/contactformulier', 'ContactformulierController#contactformulierPage', 'contactformulier' );
 

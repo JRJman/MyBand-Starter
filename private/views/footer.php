@@ -1,4 +1,4 @@
-    <script src="http://localhost:8080/test/public/js/header.js"></script>
+    <script src="http://localhost/test/public/js/header.js"></script>
     <div id="validatie">
       <a href="http://validator.w3.org/check?uri=referer" target="_blank">
         <img src="https://blanken5.home.xs4all.nl/afb/valid-html5-blue.png" alt="Valide HTML5"></a>

@@ -63,7 +63,7 @@
             echo "<td>" . $rij['email'] . "</td>";
             echo "<td>" . $rij['active'] . "</td>";
             echo "<td class=hover onclick=admin(" . $rij['id'] . ")>" . $rij['admin'] . "</td>";
-            echo "<td class=verwijder onclick=verwijder(" . $rij['id'] . ")>Verwijderen</td>";
+            echo "<td class='verwijder hover' onclick=verwijder(" . $rij['id'] . ")>Verwijderen</td>";
           echo "</tr>";
         }
       ?>

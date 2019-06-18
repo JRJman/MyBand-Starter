@@ -9,10 +9,10 @@
     }
   }
   if($boolean == false){
-    header("Location: http://www.jrjweb.nl/myband/public/verboden_voor_jouw");
+    header("Location: http://localhost/test/public/verboden_voor_jouw");
   }
 ?>
-<form action="http://www.jrjweb.nl/myband/public/php/emailU" method="post">
+<form action="http://localhost/test/public/php/emailU" method="post">
   <p>Typ je nieuwe email in</p>
   <input type="email" name="email" required><br>
   <input type="submit" value="versturen">

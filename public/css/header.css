@@ -8,6 +8,12 @@ body{
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+#logo {
+  width: auto;
+  height: 90px;
+  padding: 5px;
+}
+
 nav {
   background-color: black;
   width: 15%;

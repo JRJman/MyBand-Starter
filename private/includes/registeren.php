@@ -8,6 +8,8 @@
   $bG = true;
   $bE = true;
 
+  $id = 0;
+
   $con = dbConnect();
   $sql = "SELECT * FROM account";
   $statement = $con->query($sql);
@@ -23,9 +25,11 @@
     if($email === $rij['email']){
       $bE = false;
     }
+    $id = $row['id'];
   }
   if($bE == true && $bG == true && $bH == true){
-    maakAccount($gebruikersnaam, $wachtwoord1, $email);
+    $id = $id + 1;
+    maakAccount($gebruikersnaam, $wachtwoord1, $email, $id);
     header("Location: http://www.jrjweb.nl/myband/public/mail/registeren/account");
   } else if($bG && $bE){
     header("Location: http://www.jrjweb.nl/myband/public/log_in-registeren/fout/rH");

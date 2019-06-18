@@ -20,13 +20,13 @@ function dbConnect(){
 
 }
 
-function maakAccount($gebruikersnaam, $wachtwoord, $email){
+function maakAccount($gebruikersnaam, $wachtwoord, $email, $id){
   $hash = password_hash($wachtwoord, PASSWORD_BCRYPT);
   $ver = code();
   $con = dbConnect();
-  $sql = "INSERT INTO account (id,gebruikersnaam,wachtwoord,email,active,vertificatie,admin) VALUES ('','$gebruikersnaam','$hash','$email','false','$ver','false')";
+  $sql = "INSERT INTO account (id,gebruikersnaam,wachtwoord,email,active,vertificatie,admin) VALUES ('$id','$gebruikersnaam','$hash','$email','false','$ver','false')";
   $con->query($sql);
-  $link = "http://www.jrjweb.nl/myband/public/mail/activatie/'$gebruikersnaam'";
+  $link = "http://www.jrjweb.nl/myband/public/mail/activatie/$gebruikersnaam";
   $msg = "click op deze link om u account te activeren\n" . $link;
   $result = mail($email, 'Activatie Account', $msg);
 }

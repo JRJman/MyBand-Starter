@@ -21,8 +21,8 @@
   }
 
   if($boolean){
-    header("Location: http://localhost/test/public/");
+    header("Location: http://www.jrjweb.nl/myband/test/public/");
   } else {
-    header("Location: http://localhost/test/public/aanpassen/email/" . $ver);
+    header("Location: http://www.jrjweb.nl/myband/test/public/aanpassen/email/" . $ver);
   }
 ?>

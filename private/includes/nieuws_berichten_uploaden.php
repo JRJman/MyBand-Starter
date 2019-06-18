@@ -6,7 +6,7 @@ if(!empty($_SESSION['a'])){
   }
 }
 if(!$boolean){
-  header("Location: http://localhost/test/public/");
+  header("Location: http://www.jrjweb.nl/myband/public/");
 }
 
 $boolean = false;
@@ -20,7 +20,7 @@ if(!empty($_POST['titel'])){
   }
 }
 if(!$boolean){
-  header("Location: http://localhost/test/public/verboden_voor_jouw");
+  header("Location: http://www.jrjweb.nl/myband/public/verboden_voor_jouw");
 }
 
 if(isset($_FILES['image'])){
@@ -47,7 +47,7 @@ if(isset($_FILES['image'])){
   if(empty($errors)==true){
     move_uploaded_file($file_tmp,"images/".$file_name);
   } else{
-    header("Location: http://localhost/test/public/verboden_voor_jouw");
+    header("Location: http://www.jrjweb.nl/myband/public/verboden_voor_jouw");
   }
 
 
@@ -61,9 +61,9 @@ if(isset($_FILES['image'])){
   $sql = "INSERT INTO nieuwsbericht VALUES('','$titel','$file_name','$tekst','$datum','$bron')";
   $con->query($sql);
 } else {
-  header("Location: http://localhost/test/public/verboden_voor_jouw");
+  header("Location: http://www.jrjweb.nl/myband/public/verboden_voor_jouw");
 }
 
-header("Location: http://localhost/test/public/admin");
+header("Location: http://www.jrjweb.nl/myband/public/admin");
 
 ?>

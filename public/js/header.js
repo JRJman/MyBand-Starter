@@ -5,5 +5,5 @@ logo.addEventListener('click', home);
 h1.addEventListener('click', home);
 
 function home() {
-  window.location.href = "/test/public/";
+  window.location.href = "/myband/public/";
 }

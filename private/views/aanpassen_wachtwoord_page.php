@@ -1,4 +1,4 @@
-<form action="http://localhost/test/public/php/wachtwoordA" method="post">
+<form action="http://www.jrjweb.nl/myband/public/php/wachtwoordA" method="post">
   <p>Typ je Email address is</p>
   <?php
     if($b == false){

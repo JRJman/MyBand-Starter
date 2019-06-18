@@ -9,4 +9,4 @@
 
 </div>
 
-<script src="http://localhost/test/public/js/home.js"></script>
+<script src="http://www.jrjweb.nl/myband/public/js/home.js"></script>

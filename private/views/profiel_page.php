@@ -22,7 +22,7 @@
   }
 
   if($checker == false){
-    header("Location: http://localhost/test/public/");
+    header("Location: http://www.jrjweb.nl/myband/public/");
   }
 ?>
 

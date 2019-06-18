@@ -15,8 +15,8 @@
   }
 
   if($boolean){
-    header("Location: http://localhost/test/public/");
+    header("Location: http://www.jrjweb.nl/myband/public/");
   } else {
-    header("Location: http://localhost/test/public/aanpassen/wachtwoord/" . $ver);
+    header("Location: http://www.jrjweb.nl/myband/public/aanpassen/wachtwoord/" . $ver);
   }
 ?>

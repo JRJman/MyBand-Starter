@@ -6,7 +6,7 @@
     }
   }
   if(!$boolean){
-    header("Location: http://localhost/test/public/");
+    header("Location: http://www.jrjweb.nl/myband/public/");
   }
 ?>
 
@@ -14,7 +14,7 @@
 
 <div id="forms">
   <div class="grid" id="news">
-    <form action="http://localhost/test/public/php/berichtH" method="post" enctype="multipart/form-data">
+    <form action="http://www.jrjweb.nl/myband/public/php/berichtH" method="post" enctype="multipart/form-data">
       <h3>Bericht uploaden op homepage</h3>
       <label for="titel">Titel *</label><br>
       <input type="text" name="titel" class="input" required><br>
@@ -30,7 +30,7 @@
     </form>
   </div>
   <div class="grid" id="agenda">
-    <form action="http://localhost/test/public/php/berichtA" method="post">
+    <form action="http://www.jrjweb.nl/myband/public/php/berichtA" method="post">
       <h3>Bericht uploaden op agenda</h3>
       <label for="titel">Titel *</label><br>
       <input type="text" name="titel" class="input" required><br>
@@ -70,4 +70,4 @@
     </table>
   </div>
 </div>
-<script src="http://localhost/test/public/js/admin.js"></script>
+<script src="http://www.jrjweb.nl/myband/public/js/admin.js"></script>

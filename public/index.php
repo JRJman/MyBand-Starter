@@ -50,7 +50,7 @@ require '../private/models/model.php';
 $router = new AltoRouter();
 
 //Als jouw public folder niet te zien is als je naar http://localhoist gaat stel dan het juiste basePath in (pas dit pad aan naar jouw situatie)
-$router->setBasePath('/test/public');
+$router->setBasePath('/myband/public');
 
 /**
  * Hier stellen we de juiste "routes" in voor onze website

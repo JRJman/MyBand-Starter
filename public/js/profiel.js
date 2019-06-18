@@ -5,9 +5,9 @@ wachtwoord.addEventListener('click', goWachtwoord);
 email.addEventListener('click', goEmail);
 
 function goWachtwoord(){
-  window.location.href = "/test/public/aanpassen/wachtwoord";
+  window.location.href = "/myband/public/aanpassen/wachtwoord";
 }
 
 function goEmail(){
-  window.location.href = "/test/public/aanpassen/email";
+  window.location.href = "/myband/public/aanpassen/email";
 }

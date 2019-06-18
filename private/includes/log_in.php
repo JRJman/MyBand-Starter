@@ -39,7 +39,7 @@
     $_SESSION['id'] = $id;
     $_SESSION['ver'] = $ver;
     $_SESSION['a'] = $admin;
-    header("Location: http://localhost/test/public/");
+    header("Location: http://www.jrjweb.nl/myband/public/");
   } else{
     if($b1 && $b2) {
       $bL2 = false;
@@ -49,11 +49,11 @@
     }
 
     if($bL1 == false && $bL2 == false){
-      header("Location: http://localhost/test/public/log_in-registeren/fout/l3");
+      header("Location: http://www.jrjweb.nl/myband/public/log_in-registeren/fout/l3");
     } else if($bL2 == false){
-      header("Location: http://localhost/test/public/log_in-registeren/fout/l2");
+      header("Location: http://www.jrjweb.nl/myband/public/log_in-registeren/fout/l2");
     } else if($bL1 == false){
-      header("Location: http://localhost/test/public/log_in-registeren/fout/l1");
+      header("Location: http://www.jrjweb.nl/myband/public/log_in-registeren/fout/l1");
     }
   }
 ?>

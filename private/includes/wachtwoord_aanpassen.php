@@ -16,7 +16,7 @@
   echo $b;
 
   if($b == "false"){
-    header("Location: http://localhost/test/public/aanpassen/wachtwoordF");
+    header("Location: http://www.jrjweb.nl/myband/public/aanpassen/wachtwoordF");
   } else {
     $sql = "SELECT * FROM account WHERE email='$email'";
     $statement = $con->query($sql);
@@ -26,15 +26,15 @@
     }
 
     $onderwerp = "Wachtwoord aanpassen";
-    $link = "http://localhost/test/public/aanpassen/wachtwoord/" . $ver;
+    $link = "http://www.jrjweb.nl/myband/public/aanpassen/wachtwoord/" . $ver;
     $msg = "klik op de link om een nieuw wachtwoord te maken " . $link;
 
     $result = mail($email, $onderwerp, $msg);
 
     if(!$result){
-      header("Location: http://localhost/test/public/mail/fout/gegaan");
+      header("Location: http://www.jrjweb.nl/myband/public/mail/fout/gegaan");
     }else{
-      header("Location: http://localhost/test/public/mail/aanpassen/gelukt");
+      header("Location: http://www.jrjweb.nl/myband/public/mail/aanpassen/gelukt");
     }
   }
 ?>

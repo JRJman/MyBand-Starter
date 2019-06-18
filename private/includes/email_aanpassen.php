@@ -13,8 +13,8 @@
   }
 
   if($ver == ""){
-    header("Location: http://localhost/test/public/aanpassen/email");
+    header("Location: http://www.jrjweb.nl/myband/public/aanpassen/email");
   } else {
-    header("Location: http://localhost/test/public/aanpassen/email/" . $ver);
+    header("Location: http://www.jrjweb.nl/myband/public/aanpassen/email/" . $ver);
   }
 ?>

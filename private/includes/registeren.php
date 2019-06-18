@@ -26,21 +26,21 @@
   }
   if($bE == true && $bG == true && $bH == true){
     maakAccount($gebruikersnaam, $wachtwoord1, $email);
-    header("Location: http://localhost/test/public/mail/registeren/account");
+    header("Location: http://www.jrjweb.nl/myband/public/mail/registeren/account");
   } else if($bG && $bE){
-    header("Location: http://localhost/test/public/log_in-registeren/fout/rH");
+    header("Location: http://www.jrjweb.nl/myband/public/log_in-registeren/fout/rH");
   } else if($bH && $bE){
-    header("Location: http://localhost/test/public/log_in-registeren/fout/rG");
+    header("Location: http://www.jrjweb.nl/myband/public/log_in-registeren/fout/rG");
   } else if($bH && $bG){
-    header("Location: http://localhost/test/public/log_in-registeren/fout/rE");
+    header("Location: http://www.jrjweb.nl/myband/public/log_in-registeren/fout/rE");
   } else if($bH){
-    header("Location: http://localhost/test/public/log_in-registeren/fout/rGE");
+    header("Location: http://www.jrjweb.nl/myband/public/log_in-registeren/fout/rGE");
   } else if($bG){
-    header("Location: http://localhost/test/public/log_in-registeren/fout/rHE");
+    header("Location: http://www.jrjweb.nl/myband/public/log_in-registeren/fout/rHE");
   } else if($bE){
-    header("Location: http://localhost/test/public/log_in-registeren/fout/rGH");
+    header("Location: http://www.jrjweb.nl/myband/public/log_in-registeren/fout/rGH");
   } else {
-    header("Location: http://localhost/test/public/log_in-registeren/fout/rGHE");
+    header("Location: http://www.jrjweb.nl/myband/public/log_in-registeren/fout/rGHE");
   }
 
 ?>

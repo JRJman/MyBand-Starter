@@ -6,9 +6,9 @@
     }
   }
   if(!$boolean){
-    header("Location: http://localhost/test/public/");
+    header("Location: http://www.jrjweb.nl/myband/public/");
   }
-  
+
   $boolean = false;
   if(!empty($_POST['titel'])){
     if(!empty($_POST['tekst'])){
@@ -18,7 +18,7 @@
     }
   }
   if(!$boolean){
-    header("Location: http://localhost/test/public/verboden_voor_jouw");
+    header("Location: http://www.jrjweb.nl/myband/public/verboden_voor_jouw");
   }
   $titel = $_POST['titel'];
   $tekst = $_POST['tekst'];
@@ -34,5 +34,5 @@
   $sql = "INSERT INTO agenda VALUES ('','$jaar','$maand','$dag','$titel','$tekst')";
   $con->query($sql);
 
-  header("Location: http://localhost/test/public/admin");
+  header("Location: http://www.jrjweb.nl/myband/public/admin");
 ?>

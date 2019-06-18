@@ -73,7 +73,7 @@
       <label for="wachtwoordL">Wachtwoord</label><br>
       <input type="password" name="wachtwoordL" required><br>
       <input type="submit" value="Log in"><br>
-      <a href="http://localhost/test/public/aanpassen/wachtwoord">wachtwoord vergeten</a>
+      <a href="http://www.jrjweb.nl/myband/public/aanpassen/wachtwoord">wachtwoord vergeten</a>
     </form>
   </div>
   <div id="registeren">

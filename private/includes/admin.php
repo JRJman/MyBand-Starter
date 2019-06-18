@@ -7,11 +7,11 @@
     }
   }
   if(!$boolean){
-    header("Location: http://localhost/test/public/");
+    header("Location: http://www.jrjweb.nl/myband/public/");
   } else {
     $con = dbConnect();
     $sql = "UPDATE account SET admin='true' WHERE id=$variable";
     $con->query($sql);
-    header("Location: http://localhost/test/public/admin");
+    header("Location: http://www.jrjweb.nl/myband/public/admin");
   }
 ?>

@@ -4,7 +4,9 @@
 
     $maand = $_GET['maand'];
     $jaar = $_GET['jaar'];
-    $dag = date('j');
+    $RealDay = date('j');
+    $RealMonth = date('n');
+    $RealYear = date('Y');
     $boolean = false;
     $hour = 0;
     $minute = 0;
@@ -64,7 +66,7 @@
 
         if($month != $month2){
           echo "<th class='grey nummers'>";
-        }else if($day == $dag){
+        }else if($day == $RealDay && $month == $RealMonth && $year == $RealYear){
           echo "<th class='today nummers'>";
         }else{
           echo "<th class='nummers'>";

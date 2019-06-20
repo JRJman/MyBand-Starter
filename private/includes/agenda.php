@@ -61,8 +61,11 @@
           $boolean = true;
         }
 
-        $sql = "SELECT * FROM agenda WHERE maand='$month' AND jaar='$year' AND dag='$day'";
-        $statement = $con->query($sql);
+        $whereColumn = array('maand','jaar','dag');
+        $whereVar = array($maand,$jaar,$dag);
+
+        // $sql = "SELECT * FROM agenda WHERE maand='$month' AND jaar='$year' AND dag='$day'";
+        $statement = SQLselect($con,'agenda','*',true,$whereColumn,$whereVar,3);
 
         if($month != $month2){
           echo "<th class='grey nummers'>";

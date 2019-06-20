@@ -30,9 +30,10 @@
   $maand = $datum_array[1];
   $dag = $datum_array[2];
 
+  $arrayValues = array($jaar,$maand,$dag,$titel,$tekst);
   $con = dbConnect();
-  $sql = "INSERT INTO agenda VALUES ('','$jaar','$maand','$dag','$titel','$tekst')";
-  $con->query($sql);
+  $statement = SQLupdate($con,'agenda',$arrayValues, 5);
+  $statement;
 
   header("Location: http://www.jrjweb.nl/myband/public/admin");
 ?>

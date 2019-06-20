@@ -10,8 +10,8 @@
     header("Location: http://www.jrjweb.nl/myband/public/");
   } else {
     $con = dbConnect();
-    $sql = "UPDATE account SET admin='true' WHERE id=$variable";
-    $con->query($sql);
+    $statement = SQLupdate($con,'account','admin','true','id',$variable);
+    $statement;
     header("Location: http://www.jrjweb.nl/myband/public/admin");
   }
 ?>

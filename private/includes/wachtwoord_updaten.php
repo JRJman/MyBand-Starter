@@ -8,8 +8,11 @@
   if($wachtwoord1 === $wachtwoord2){
     $hash = password_hash($wachtwoord1, PASSWORD_BCRYPT);
     $con = dbConnect();
-    $sql = "UPDATE account SET wachtwoord='$hash', vertificatie='$ver2' WHERE vertificatie='$ver'";
-    $con->query($sql);
+    $whatColumn = array('wachtwoord','vertificatie');
+    $whatVar = array($hash, $ver2);
+    $whereColumn = array('vertificatie');
+    $whereVar = array($ver);
+    SQLupdate($con, 'account', $whatColumn , $whatVar, 2, $whereColumn, $whereVar, 1);
   } else {
     $boolean == false;
   }

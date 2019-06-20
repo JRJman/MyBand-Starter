@@ -1,7 +1,8 @@
 <?php
   require "functions.php";
+  require "../models/model.php";
 
-  $search = $_GET['search'];
+$search = $_GET['search'];
   $nummerGet = $_GET['nummer'];
 
   $nummer1 = $nummerGet * 2;
@@ -9,10 +10,10 @@
   $nummer3 = 1;
 
   $con = dbConnect();
-  $sql = "SELECT * FROM nieuwsbericht WHERE tekst LIKE '%$search%' ORDER BY datum DESC";
-  $statement = $con->query($sql);
+  $statement = SQLSearch($con,$search);
 
-  echo "<div id=berichten>";
+
+echo "<div id=berichten>";
   foreach ($statement as $rij) {
     if($nummer3 == $nummer1 || $nummer3 == $nummer2){
       echo "<div class=bericht>";
@@ -27,8 +28,7 @@
   }
   echo "</div>";
   if($nummer3 > 3){
-    $sql = "SELECT * FROM nieuwsbericht WHERE tekst LIKE '%$search%' ORDER BY datum DESC";
-    $statement = $con->query($sql);
+    $statement = SQLsearch($con, $search);
 
     $boolean = true;
     $nummer = 1;

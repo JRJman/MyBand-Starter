@@ -10,8 +10,9 @@ if(!$boolean){
   header("Location: http://www.jrjweb.nl/myband/public/");
 } else {
   $con = dbConnect();
-  $sql = "DELETE FROM account WHERE id='$variable'";
-  $con->query($sql);
+  $whereColumn = array('id');
+  $whereVar = array($variable);
+  SQLdelete($con, 'account', $whereColumn, $whereVar, 1);
   header("Location: http://www.jrjweb.nl/myband/public/admin");
 }
 ?>

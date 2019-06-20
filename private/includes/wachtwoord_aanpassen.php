@@ -4,10 +4,10 @@
 
   $ver = "";
   $con = dbConnect();
-  $sql = "SELECT * FROM account";
-  $statement = $con->query($sql);
+  $statement = SQLselect($con,'account','*','false','','',0);
 
-  foreach ($statement as $rij) {
+
+foreach ($statement as $rij) {
     if($email == $rij['email']){
       $b = "true";
     }
@@ -18,8 +18,9 @@
   if($b == "false"){
     header("Location: http://www.jrjweb.nl/myband/public/aanpassen/wachtwoordF");
   } else {
-    $sql = "SELECT * FROM account WHERE email='$email'";
-    $statement = $con->query($sql);
+    $whereColumn = array('email');
+    $whereVar = array($email);
+    $statement = SQLselect($con,'account','*','true',$whereColumn,$whereVar,1);
 
     foreach ($statement as $rij) {
       $ver = $rij['vertificatie'];

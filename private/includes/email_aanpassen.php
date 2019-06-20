@@ -3,8 +3,8 @@
   $ver = "";
 
   $con = dbConnect();
-  $sql = "SELECT * FROM account";
-  $statement = $con->query($sql);
+  $statement = SQLselect($con, 'account','*','false','','','');
+
 
   foreach ($statement as $rij) {
     if(password_verify($wachtwoord, $rij['wachtwoord'])){

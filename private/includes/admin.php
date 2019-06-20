@@ -10,8 +10,23 @@
     header("Location: http://www.jrjweb.nl/myband/public/");
   } else {
     $con = dbConnect();
-    $statement = SQLupdate($con,'account','admin','true','id',$variable);
-    $statement;
+    $whereColumn = array('id');
+    $whereVar = array($variable);
+    $statement = SQLselect($con,'account','*','true',$whereColumn,$whereVar, 1);
+    $admin = 'false';
+    foreach ($statement as $rij) {
+      $admin = $rij['admin'];
+    }
+    $whatColumn = array('admin');
+    $whereColumn = array('id');
+    $whereVar = array($variable);
+    if($admin == 'true'){
+      $whatVar = array('false');
+      SQLupdate($con, 'account', $whatColumn, $whatVar, 1, $whereColumn, $whereVar, 1);
+    } else {
+      $whatVar = array('true');
+      SQLupdate($con, 'account', $whatColumn, $whatVar, 1, $whereColumn, $whereVar, 1);
+    }
     header("Location: http://www.jrjweb.nl/myband/public/admin");
   }
 ?>

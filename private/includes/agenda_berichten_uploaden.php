@@ -1,5 +1,6 @@
 <?php
   $boolean = false;
+  session_start();
   if(!empty($_SESSION['a'])){
     if($_SESSION['a'] == "true"){
       $boolean = true;
@@ -32,8 +33,7 @@
 
   $arrayValues = array($jaar,$maand,$dag,$titel,$tekst);
   $con = dbConnect();
-  $statement = SQLupdate($con,'agenda',$arrayValues, 5);
-  $statement;
+  SQLinsert($con,'agenda',$arrayValues, 5);
 
   header("Location: http://www.jrjweb.nl/myband/public/admin");
 ?>

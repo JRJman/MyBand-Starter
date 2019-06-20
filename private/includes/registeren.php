@@ -11,10 +11,10 @@
   $id = 0;
 
   $con = dbConnect();
-  $sql = "SELECT * FROM account";
-  $statement = $con->query($sql);
+  $statement = SQLselect($con,'account','*','false','','',0);
 
-  if($wachtwoord1 !== $wachtwoord2){
+
+if($wachtwoord1 !== $wachtwoord2){
     $bH = false;
   }
 

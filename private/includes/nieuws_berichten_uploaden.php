@@ -58,8 +58,8 @@ if(isset($_FILES['image'])){
   $datum = $_POST['datum'];
 
   $con = dbConnect();
-  $sql = "INSERT INTO nieuwsbericht VALUES('','$titel','$file_name','$tekst','$datum','$bron')";
-  $con->query($sql);
+  $arrayValues = array($titel,$file_name,$tekst,$datum,$bron);
+  SQLinsert($con, 'nieuwsbericht',$arrayValues,5);
 } else {
   header("Location: http://www.jrjweb.nl/myband/public/verboden_voor_jouw");
 }

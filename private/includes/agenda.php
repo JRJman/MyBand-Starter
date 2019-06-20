@@ -1,5 +1,7 @@
 <?php
     require 'functions.php';
+    require __DIR__ . '/../models/model.php';
+
     $con = dbConnect();
 
     $maand = $_GET['maand'];
@@ -62,10 +64,9 @@
         }
 
         $whereColumn = array('maand','jaar','dag');
-        $whereVar = array($maand,$jaar,$dag);
+        $whereVar = array($month, $year, $day);
 
-        // $sql = "SELECT * FROM agenda WHERE maand='$month' AND jaar='$year' AND dag='$day'";
-        $statement = SQLselect($con,'agenda','*',true,$whereColumn,$whereVar,3);
+        $statement = SQLselect($con,'agenda','*','true',$whereColumn,$whereVar,3);
 
         if($month != $month2){
           echo "<th class='grey nummers'>";

@@ -16,8 +16,12 @@
   }
 
   if($boolean == true){
-    $sql = "UPDATE account SET email='$email', vertificatie='$ver2' WHERE vertificatie='$ver'";
-    $con->query($sql);
+    $whatColumn = array('email','vertificatie');
+    $whatVar = array($email,$ver2);
+    $whereColumn = array('vertificatie');
+    $whereVar = array($ver);
+    $statement = SQLupdate($con, 'account', $whatColumn, $whatVar, 2, $whereColumn, $whereVar, 1);
+    $statement;
   }
 
   if($boolean){

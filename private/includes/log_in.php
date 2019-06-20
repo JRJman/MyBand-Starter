@@ -3,8 +3,9 @@
   $wachtwoord = $_GET['wachtwoordL'];
 
   $con = dbConnect();
-  $sql = "SELECT * FROM account WHERE gebruikersnaam='$gebruikersnaam'";
-  $statement = $con->query($sql);
+  $whereColmn = array('gebruikersnaam');
+  $whereVar = array($gebruikersnaam);
+  $statement = SQLselect($con,'account','*','true',$whereColmn,$whereVar,1);
 
   $id = 0;
   $admin = "";

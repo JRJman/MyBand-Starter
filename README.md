@@ -34,20 +34,20 @@ Deze fase duurt 2 weken
 
 | Milestone  | Status | Link |
 | ------ |  ------ | ------ |
-| B1-K1-W2 Product backlog                          | TODO | [Backlog]                            | Link naar Trello met Sprint planningen | |
-| B1-K1-W2 Sprint planning 1, 2 en 3                | TODO | [Trello] / [Trello Tips]             | Link naar Trello met Sprint planningen | |
-| B1-K1-W3 Technisch Ontwerp                        | TODO | [TO]                                 | Markdown of Word/RTF| |
+| B1-K1-W2 Product backlog                          | DONE | [Backlog]                            | Link naar Trello met Sprint planningen | |
+| B1-K1-W2 Sprint planning 1, 2 en 3                | DONE | [Trello] / [Trello Tips]             | Link naar Trello met Sprint planningen | |
+| B1-K1-W3 Technisch Ontwerp                        | DONE | [TO]                                 | Markdown of Word/RTF| |
 
-[Backlog]: </doc/fase-2/technisch-ontwerp.md>
-[TO]: </doc/fase-2/technisch-ontwerp.md>
-[Trello]: <https://trello.com/b/He6JX83u/myband-sprints>
-[Trello Tips]: <https://blog.trello.com/how-to-scrum-and-trello-for-teams-at-work>
+[Backlog]: <https://trello.com/b/RPLUHs8n/project14>
+[TO]: <https://trello.com/b/RPLUHs8n/project14>
+[Trello]: <https://trello.com/b/RPLUHs8n/project14>
+[Trello Tips]: <https://trello.com/b/RPLUHs8n/project14>
    
 #### Fase 3: Testen en opleveren van het project
 
 | Milestone  | Status | Link |
 | ------ |  ------ | ------ |
-| B1-K3-W2 Link naar de live omgeving                        |  TODO |  <https://mijnliveomgeving.com> |
+| B1-K3-W2 Link naar de live omgeving                        |  DONE |  <http://www.jrjweb.nl/myband/public/> |
 | B1-K3-W2 Gebruikersdocumentatie / instructie               |  TODO |  [Gebruikers documentatie] |
 | B1-K3-W3 Evaluatie                                         |  TODO |  [Evaluatie] |
 

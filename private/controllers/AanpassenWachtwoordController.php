@@ -12,7 +12,8 @@ class AanpassenWachtwoordController {
 
 	function AanpassenWachtwoordPage($tekst){
 		$page = "wachtwoord_veranderen";
-		require '../private/views/header.php';
+        require '../private/models/aanpassenModel.php';
+        require '../private/views/header.php';
 		require '../private/views/aanpassen_wachtwoord_2_page.php';
 		require '../private/views/footer.php';
 	}

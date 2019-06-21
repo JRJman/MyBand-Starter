@@ -5,9 +5,5 @@
 
 <?php
   $con = dbConnect();
-  $sql = "SELECT * FROM page WHERE page=1";
-  $statement = $con->query($sql);
-  foreach ($statement as $rij) {
-    echo $rij['tekst'];
-  }
+  getGeschiedenis($con);
 ?>

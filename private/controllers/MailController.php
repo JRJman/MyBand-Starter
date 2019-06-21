@@ -12,7 +12,8 @@ class MailController {
 
 	function mailPage($tekst,$gebruikersnaam){
 		$page = "Mail";
-		require '../private/views/header.php';
+        require '../private/models/mailModel.php';
+        require '../private/views/header.php';
 		require '../private/views/mail_page.php';
 		require '../private/views/footer.php';
 	}

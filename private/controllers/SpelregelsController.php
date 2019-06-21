@@ -12,7 +12,8 @@ class SpelregelsController {
 
 	function SpelregelsPage(){
 		$page = "Spelregels";
-		require '../private/views/header.php';
+        require '../private/models/pages.php';
+        require '../private/views/header.php';
 		require '../private/views/spelregels_page.php';
 		require '../private/views/footer.php';
 	}

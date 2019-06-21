@@ -6,7 +6,7 @@ if(!empty($_SESSION['a'])){
   }
 }
 if(!$boolean){
-  header("Location: http://www.jrjweb.nl/myband/public/");
+  header("Location: http://localhost/test/public/");
 }
 
 $boolean = false;
@@ -20,7 +20,7 @@ if(!empty($_POST['titel'])){
   }
 }
 if(!$boolean){
-  header("Location: http://www.jrjweb.nl/myband/public/verboden_voor_jouw");
+  header("Location: http://localhost/test/public/verboden_voor_jouw");
 }
 
 if(isset($_FILES['image'])){
@@ -41,7 +41,6 @@ if(isset($_FILES['image'])){
 
   if($file_size > 2097152){
     $errors[] ='Het bestand moet kleiner zijn dan 2 MB';
-        echo "<script>console.log(Het bestand moet kleiner zijn dan 2 MB');</script>";
   }
 
   if(empty($errors)==true){
@@ -59,11 +58,13 @@ if(isset($_FILES['image'])){
 
   $con = dbConnect();
   $arrayValues = array($titel,$file_name,$tekst,$datum,$bron);
-  SQLinsert($con, 'nieuwsbericht',$arrayValues,5);
-} else {
-  header("Location: http://www.jrjweb.nl/myband/public/verboden_voor_jouw");
-}
+  //  SQLinsert($con, 'nieuwsbericht',$arrayValues,5);
+  nieuwsBerichtUploaden($con,$arrayValues);
 
-header("Location: http://www.jrjweb.nl/myband/public/admin");
+  } else {
+    header("Location: http://www.jrjweb.nl/myband/public/verboden_voor_jouw");
+  }
+
+  header("Location: http://www.jrjweb.nl/myband/public/admin");
 
 ?>

@@ -5,31 +5,19 @@
   $email = $_GET['email'];
 
   $bH = true;
-  $bG = true;
-  $bE = true;
 
-  $id = 0;
-
-  $con = dbConnect();
-  $statement = SQLselect($con,'account','*','false','','',0);
-
-
-if($wachtwoord1 !== $wachtwoord2){
+  if($wachtwoord1 !== $wachtwoord2){
     $bH = false;
   }
 
-  foreach ($statement as $rij) {
-    if($gebruikersnaam === $rij['gebruikersnaam']){
-      $bG = false;
-    }
-    if($email === $rij['email']){
-      $bE = false;
-    }
-    $id = $row['id'];
-  }
+  $con = dbConnect();
+  $checker = registeren($con, $gebruikersnaam, $email);
+
+  $bG = $checker[0];
+  $bE = $checker[1];
+
   if($bE == true && $bG == true && $bH == true){
-    $id = $id + 1;
-    maakAccount($gebruikersnaam, $wachtwoord1, $email, $id);
+    maakAccount($gebruikersnaam, $wachtwoord1, $email);
     header("Location: http://www.jrjweb.nl/myband/public/mail/registeren/account");
   } else if($bG && $bE){
     header("Location: http://www.jrjweb.nl/myband/public/log_in-registeren/fout/rH");

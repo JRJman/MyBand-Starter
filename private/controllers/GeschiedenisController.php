@@ -12,7 +12,8 @@ class GeschiedenisController {
 
 	function geschiedenisPage(){
 		$page = "Geschiedenis";
-		require '../private/views/header.php';
+        require '../private/models/pages.php';
+        require '../private/views/header.php';
 		require '../private/views/geschiedenis_page.php';
 		require '../private/views/footer.php';
 	}

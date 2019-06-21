@@ -19,7 +19,8 @@ class AgendaController {
 
 	function showBericht($id){
 		$page = "Bericht";
-		require '../private/views/header.php';
+        require '../private/models/agendaModel.php';
+        require '../private/views/header.php';
 		require '../private/views/agenda_berichten_page.php';
 		require '../private/views/footer.php';
 	}

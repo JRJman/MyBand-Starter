@@ -42,9 +42,5 @@
 
 <?php
   $con = dbConnect();
-  $sql = "SELECT * FROM page WHERE page=2";
-  $statement = $con->query($sql);
-  foreach ($statement as $rij) {
-    echo $rij['tekst'];
-  }
+  getSpelregels($con);
 ?>

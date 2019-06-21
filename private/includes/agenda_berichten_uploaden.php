@@ -32,8 +32,10 @@
   $dag = $datum_array[2];
 
   $arrayValues = array($jaar,$maand,$dag,$titel,$tekst);
+
   $con = dbConnect();
-  SQLinsert($con,'agenda',$arrayValues, 5);
+//  SQLinsert($con,'agenda',$arrayValues, 5);
+  agendaBerichtUploaden($con,$arrayValues);
 
   header("Location: http://www.jrjweb.nl/myband/public/admin");
 ?>

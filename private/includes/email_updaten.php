@@ -6,27 +6,12 @@
   $ver2 = code();
 
   $con = dbConnect();
-  $sql = "SELECT * FROM account";
-  $statement = $con->query($sql);
 
-  foreach ($statement as $rij) {
-    if($ver === $rij['vertificatie']){
-      $boolean = true;
-    }
-  }
-
-  if($boolean == true){
-    $whatColumn = array('email','vertificatie');
-    $whatVar = array($email,$ver2);
-    $whereColumn = array('vertificatie');
-    $whereVar = array($ver);
-    $statement = SQLupdate($con, 'account', $whatColumn, $whatVar, 2, $whereColumn, $whereVar, 1);
-    $statement;
-  }
+  $boolean = emailUpdaten($con, $ver, $email, $ver2);
 
   if($boolean){
-    header("Location: http://www.jrjweb.nl/myband/test/public/");
+    header("Location: http://www.jrjweb.nl/myband/public/");
   } else {
-    header("Location: http://www.jrjweb.nl/myband/test/public/aanpassen/email/" . $ver);
+    header("Location: http://www.jrjweb.nl/myband/public/aanpassen/email/" . $ver);
   }
 ?>

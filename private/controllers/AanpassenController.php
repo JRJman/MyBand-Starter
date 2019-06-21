@@ -16,10 +16,11 @@ class AanpassenController {
 		} else if($tekst == "wachtwoord" || $tekst == "wachtwoordF"){
 			$page = "wachtwoord_aanpassen";
 		}
-		require '../private/views/header.php';
+        require '../private/models/aanpassenModel.php';
+        require '../private/views/header.php';
 
 		if($tekst == "email"){
-	    require '../private/views/aanpassen_email_page.php';
+            require '../private/views/aanpassen_email_page.php';
 	  }else if($tekst == "wachtwoord" || $tekst == "wachtwoordF"){
 			$b = true;
 			if($tekst == "wachtwoordF"){

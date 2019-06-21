@@ -1,5 +1,7 @@
 <?php
 
+require __DIR__ . '/../models/functionsModel.php';
+
 function dbConnect(){
 
     $config = require __DIR__ . '/config.php';
@@ -20,13 +22,13 @@ function dbConnect(){
 
 }
 
-function maakAccount($gebruikersnaam, $wachtwoord, $email, $id){
+function maakAccount($gebruikersnaam, $wachtwoord, $email){
   $hash = password_hash($wachtwoord, PASSWORD_BCRYPT);
   $ver = code();
   $con = dbConnect();
   $arrayValues = array($gebruikersnaam,$hash,$email,'false',$ver,'false');
-  SQLinsert($con,'account',$arrayValues,6);
-  $link = "http://www.jrjweb.nl/myband/public/mail/activatie/$gebruikersnaam";
+  accountmaken($con, $arrayValues);
+  $link = "http://www.jrjweb.nl/myband/public/mail/activatie/'$gebruikersnaam'";
   $msg = "click op deze link om u account te activeren\n" . $link;
   $result = mail($email, 'Activatie Account', $msg);
 }

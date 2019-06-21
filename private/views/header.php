@@ -1,4 +1,5 @@
 <?php
+    require '../private/models/headerModel.php';
   session_start();
   $header = false;
   $admin = false;
@@ -10,15 +11,7 @@
   if(!empty($_SESSION['id'])){
     if(!empty($_SESSION['ver'])){
       $con = dbConnect();
-      $sql = "SELECT * FROM account";
-      $statement = $con->query($sql);
-      foreach ($statement as $rij) {
-        if($_SESSION['id'] === $rij['id']){
-          if($_SESSION['ver'] === $rij['vertificatie']){
-            $header = true;
-          }
-        }
-      }
+      $header = boolean($con,$_SESSION['id'],$_SESSION['ver']);
     }
   }
 ?>

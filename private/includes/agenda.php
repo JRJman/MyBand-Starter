@@ -1,7 +1,6 @@
 <?php
     require 'functions.php';
-    require __DIR__ . '/../models/model.php';
-
+    require __DIR__ . '/../models/agendaModel.php';
     $con = dbConnect();
 
     $maand = $_GET['maand'];
@@ -63,10 +62,7 @@
           $boolean = true;
         }
 
-        $whereColumn = array('maand','jaar','dag');
         $whereVar = array($month, $year, $day);
-
-        $statement = SQLselect($con,'agenda','*','true',$whereColumn,$whereVar,3);
 
         if($month != $month2){
           echo "<th class='grey nummers'>";
@@ -78,11 +74,7 @@
         echo "<div class=number>";
         echo $day;
         echo "</div>";
-        foreach ($statement as $rij) {
-          echo "<div class='bericht' onclick='bericht(" . $rij['id'] . ")'>";
-          echo $rij['titel'];
-          echo "</div>";
-        }
+        GetAgenda($con, $whereVar);
         echo "</th>";
       }
       echo "</tr>";

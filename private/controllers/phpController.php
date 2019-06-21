@@ -1,6 +1,7 @@
 <?php
 class phpController {
   function phpPage($tekst){
+    require '../private/models/extraModel.php';
     if($tekst == "wachtwoordA"){
       require '../private/includes/wachtwoord_aanpassen.php';
     } else if($tekst == "wachtwoordU"){
@@ -19,6 +20,7 @@ class phpController {
   }
 
   function phpPageWithVariable($tekst,$variable){
+    require '../private/models/extraModel.php';
     if($tekst == "verwijder"){
       require '../private/includes/verwijder.php';
     } else if($tekst == "admin"){

@@ -25,7 +25,7 @@ Deze fase duurt 2 weken
 [Plan van Aanpak]: <doc/fase-1/Plan%20van%20aanpak.docx>
 [User stories]: <doc/fase-1/userstories.xlsx>
 [Design]: <doc/fase-1/design/design.md/>
-[FO]: <doc/fase-1/userstories.xlsx>
+[FO]: <https://github.com/JRJman/MyBand-Starter/blob/master/doc/fase-1/wireframes.rp>
 [Flow]: <doc/fase-1/flow.svg>
 [Urenschatting]: <https://trello.com/b/RPLUHs8n/project14>
 [axShare]: <https://github.com/JRJman/MyBand-Starter/blob/master/doc/fase-1/wireframes.rp>

@@ -3,8 +3,14 @@
 Het is belangrijk om na het opleveren van een project terug te kijken op het hele proces
 
 * Wat ging er goed
+de agenda maken
+
 * Waar had je moeite mee
+met de css
+
 * Haalde je de oplevermomenten in je planning? Waarom wel / niet?
+
+
 * Hoe ging de communicatie met de betrokkenen
 * Wat zou je anders doen
 
